@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#71CAF3"
+    android:id="@+id/rlRoot"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+
+        >
+
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#03A9F4"
+        android:padding="16dp"
+
+        >
+
+        <TextView
+            android:id="@+id/txtCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="City"
+            android:textColor="#ffffff"
+            android:textSize="32dp" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCity"
+            android:text="time"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="133dp"
+            android:layout_height="119dp"
+            android:layout_below="@id/txtTime"
+            android:src="@drawable/phc" />
+
+        <TextView
+            android:id="@+id/txtValue"
+            android:layout_width="120dp"
+            android:layout_height="77dp"
+            android:layout_alignEnd="@+id/imgIcon"
+            android:layout_alignRight="@+id/imgIcon"
+            android:layout_alignBottom="@+id/imgIcon"
+            android:layout_marginStart="188dp"
+            android:layout_marginLeft="188dp"
+            android:layout_marginEnd="-275dp"
+            android:layout_marginRight="-275dp"
+            android:layout_marginBottom="-33dp"
+            android:layout_toEndOf="@+id/txtCity"
+            android:layout_toRightOf="@+id/txtCity"
+            android:text="3°"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:translationX="-45dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="385dp"
+        android:layout_height="184dp"
+        android:layout_below="@id/rlMain"
+        android:layout_marginTop="2dp"
+        android:background="#ffffffff"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtTitleFeelLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feels Like"
+            android:translationX="85dp" />
+
+        <TextView
+            android:id="@+id/textValueFeelLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7°"
+            android:translationX="85dp"
+            android:translationY="15dp" />
+
+        <ImageView
+            android:id="@+id/imgHumidity"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:translationX="-30dp"
+            android:translationY="65dp"
+            app:srcCompat="@drawable/humidity2" />
+
+        <TextView
+            android:id="@+id/imgTitleHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity"
+            android:translationX="85dp"
+            android:translationY="75dp" />
+
+        <TextView
+            android:id="@+id/txtValueHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7°"
+            android:translationX="85dp"
+            android:translationY="95dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgFeelLike"
+        android:layout_width="62dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/rlMain"
+        android:layout_marginTop="-35dp"
+        android:translationX="20dp"
+        app:srcCompat="@drawable/temperature" />
+    </RelativeLayout>
+
+    <EditText
+
+        android:id="@+id/edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input City"
+        android:layout_marginTop="40dp"
+        />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt"
+        android:layout_centerHorizontal="true"
+        android:text="Check"
+        android:onClick="Check"
+        />
+
+
+</RelativeLayout>
+
